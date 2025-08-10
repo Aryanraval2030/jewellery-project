@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Sidebar
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #1a1a1a;
+        padding-top: 60px;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .sidebar a {
+        display: block;
+        color: white;
+        padding: 15px 20px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar a:hover {
+        background: goldenrod;
+        color: black;
+    }
+
+    .menu-btn {
+        font-size: 25px;
+        cursor: pointer;
+        background: goldenrod;
+        padding: 10px 15px;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        border-radius: 5px;
+        color: black;
+        z-index: 1100;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+
+    @media (min-width: 768px) {
+        .sidebar {
+            left: 0;
+        }
+        .menu-btn {
+            display: none;
+        }
+    } */
+        header {
+            color: rgb(233, 230, 230);
+            height: 15vh;
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            align-items: center;
+            justify-content: center;
+            gap: 30vw;
+            position: fixed;
+            z-index: 1000;
+            background-color: rgba(59, 58, 58, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .outer {
+            line-height: 9vh;
+            padding-left: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 80vw;
+            display: none;
+            position: absolute;
+            z-index: 1001;
+            top: 9vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid rgb(75, 74, 74);
+        }
+
+        .sidebar a {
+            display: block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding: 5px 0 5px 0;
+            position: relative;
+            z-index: 999;
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+
+        }
+
+        .menu-btn {
+            color: rgb(255, 255, 255);
+            font-size: 1.5rem;
+        }
+
+        .outer:hover .sidebar {
+            display: block;
+            padding-left: 10px;
+        }
+
+        .menu-btn a:hover {
+            display: block;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(251, 249, 249);
+        }
+
+        .icon {
+            display: flex;
+            gap: 1em;
+        }
+
+        /* section-1---------------- */
+
+        .sec-1 {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            top: 15vh;
+        }
+
+        /* section-2---------------- */
+        .sec-2-main {
+            margin-top: 20vh;
+            margin-bottom: 20vh;
+            text-align: center;
+            color: black;
+        }
+
+        .sec-2 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding-top: 20vh;
+        }
+
+        .sec-2-btn {
+            padding: 5px 60px;
+        }
+
+        .sec-2-btn:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid whitesmoke;
+        }
+
+        .sec-2-boxes {
+            /* height: 100%;
+            width: 25%; */
+            border-right: 1px solid black;
+            padding: 0 10px;
+        }
+
+        .img-sec-2 {
+            height: 55%;
+            width: 100%;
+        }
+
+        .sec-2-text {
+            height: 43%;
+            width: 100%;
+            color: black;
+            line-height: 5px;
+        }
+
+        .sec-2-text {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .bold-text-1 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .bold-text-doller {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .heading-2-sec {
+            font-size: 5vw;
+        }
+
+        .sec-main-pera {
+            font-size: 2vw;
+        }
+
+        .hover-underline {
+            font-size: 2rem;
+            color: #110f0f;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hover-underline::after,
+        .hover-underline::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #040404, #111111);
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease-out;
+        }
+
+        .hover-underline::before {
+            top: -5px;
+            transform-origin: left;
+        }
+
+        .hover-underline:hover::after,
+        .hover-underline:hover::before {
+            transform: scaleX(1);
+        }
+
+        .btn-sec-2-main {
+            border: none;
+            border-bottom: 1px solid rgb(74, 73, 73);
+        }
+
+        /* section3======================= */
+
+        .sec-3 {
+            height: 400px;
+            width: 100%;
+            margin-top: 20vh;
+        }
+
+        .sec-3-img {
+            padding-left: 5%;
+            padding-right: 5%;
+            height: 400px;
+            width: 90%;
+        }
+
+        .main-3 {
+            margin-top: 20vh;
+            text-align: center;
+            color: black;
+        }
+
+        .main-3-inr {
+            margin-top: 20vh;
+        }
+
+        /* section-4------------- */
+        .section-4 {
+            margin-top: 20vh;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            margin-bottom: 100px;
+        }
+
+        .sec-4-inr {
+            height: 100%;
+            width: 50%;
+            padding: 0 5px;
+        }
+
+        .inr-4-boxes {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            border: 1px solid white;
+        }
+
+        .inr-sec-1-sale {
+            height: 100%;
+            width: 50%;
+            border: 1px solid white;
+            padding: 0 10px;
+            background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #2a2a2a);
+        }
+
+        .img-sec-4-inr {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* section-5---------------------------------- */
+        .sec-5 {
+            margin-top: 20vh;
+            height: 850px;
+            width: 100%;
+        }
+
+        .sec-5-child {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            gap: 2px;
+        }
+
+        .sec-5-inr-boxes {
+            height: 80%;
+            width: 50%;
+        }
+
+        .sec-5-child-1 {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 2px;
+        }
+
+        .box-2-sec-5 {
+            height: 100%;
+            width: 30%;
+        }
+
+        .sec-5-inr-c-1 {
+            height: 100%;
+        }
+
+        .main-5 {
+            color: rgb(0, 0, 0);
+        }
+
+        .main-5-top {
+            padding: 0 2rem;
+        }
+
+        /* section-6------------------------------ */
+        .sec-6 {
+            height: 400px;
+            margin-top: 15vh;
+            width: 100%;
+        }
+
+        .sec-6-img {
+            padding-left: 5%;
+            padding-right: 5%;
+            height: 100%;
+            width: 90%;
+        }
+
+        /* section-7================== */
+        .sec-7 {
+            height: 200px;
+            width: 100%;
+            margin-top: 20vh;
+            text-align: center;
+            color: black;
+        }
+
+        .main-7-inr {
+            margin-top: 20vh;
+        }
+
+        /* section-8========================== */
+        .sec-8 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding-top: 20vh;
+        }
+
+        .sec-8-btn {
+            padding: 5px 60px;
+        }
+
+        .sec-8-btn:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid whitesmoke;
+        }
+
+        .sec-8-boxes {
+            /* height: 100%;
+            width: 25%; */
+            border-right: 1px solid black;
+            padding: 0 10px;
+        }
+
+        .img-sec-8 {
+            height: 55%;
+            width: 100%;
+        }
+
+        .sec-8-text {
+            height: 43%;
+            width: 100%;
+            color: black;
+            line-height: 5px;
+        }
+
+        .sec-8-text {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .bold-text-1 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .bold-text-doller {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .heading-8-sec {
+            font-size: 5vw;
+        }
+
+        .sec-main-pera {
+            font-size: 2vw;
+        }
+
+        .hover-underline {
+            font-size: 2rem;
+            color: #110f0f;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hover-underline::after,
+        .hover-underline::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #040404, #111111);
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease-out;
+        }
+
+        .hover-underline::before {
+            top: -5px;
+            transform-origin: left;
+        }
+
+        .hover-underline:hover::after,
+        .hover-underline:hover::before {
+            transform: scaleX(1);
+        }
+
+        .btn-sec-8-main {
+            border: none;
+            border-bottom: 1px solid rgb(74, 73, 73);
+        }
+
+        /* section-9========================= */
+
+        .section-9 {
+            margin-top: 20vh;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            margin-bottom: 100px;
+        }
+
+        .sec-9-inr {
+            height: 100%;
+            width: 50%;
+            padding: 0 5px;
+        }
+
+        .inr-9-boxes {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            border: 1px solid white;
+        }
+
+        .inr-sec-9-sale {
+            height: 100%;
+            width: 50%;
+            border: 1px solid white;
+            padding: 0 10px;
+            background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #2a2a2a);
+        }
+
+        .img-sec-9-inr {
+            height: 70%;
+            width: 100%;
+        }
+
+        /* footer */
+        .footer {
+            width: 100%;
+            border-top: 1px solid black;
+        }
+
+        .footer-input {
+            height: 30%;
+            text-align: center;
+            width: 100%;
+            color: black;
+        }
+
+        .footer-boxes {
+            height: 70%;
+            width: 100%;
+            color: black;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        .input-btn {
+            border: none;
+            width: 20%;
+            border-bottom: 2px solid rgb(40, 39, 39);
+        }
+
+        .ftr-input-btn {
+            padding: 9px 20px;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+        }
+
+        .ftr-input-btn:hover {
+            color: rgb(200, 200, 200);
+            background-color: rgb(23, 23, 23);
+        }
+
+        .input-or-btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-boxes-inr {
+            /* height: 100%;
+            width: 25%; */
+            border-right: 1px solid black;
+        }
+
+        .footer-boxes-inr a {
+            text-decoration: none;
+            color: black;
+            line-height: 2rem;
+            display: block;
+            font-weight: 500;
+        }
+
+        .footer-boxes-inr p i {
+            font-size: 1.2rem;
+        }
+
+        .footer-boxes-inr p i:hover {
+            color: red;
+        }
+
+        .footer-boxes-inr a:hover {
+            color: #5a5858;
+        }
+        /* header====MD========== */
+
+        @media (max-width:899px) {
+            .heart {
+                display: none;
+            }
+            .menu {
+                display: none;
+            }
+        }
+          @media (max-width:647px) {
+            header{
+                gap: 27vw;
+            }
+          }
+
+        /* section-2------------------------MD-------- */
+
+        @media (min-width:845px) and (max-width:954px) {
+            .sec-2 {
+                height: auto;
+            }
+
+            .img-sec-2 {
+                height: 48%;
+            }
+            .sec-2-boxes {
+                height: 50vh;
+            }
+            .sec-2-text {
+                font-size: 13px;
+                text-align: center;
+            }
+
+            .bold-text-1 {
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .bold-text-doller {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+
+        @media (min-width:769px) and (max-width:845px) {
+            .sec-2 {
+                height: auto;
+            }
+            .img-sec-2 {
+                height: 48%;
+            }
+            .sec-2-boxes {
+                height: 50vh;
+            }
+            .sec-2-text {
+                font-size: 12px;
+                text-align: center;
+            }
+            .bold-text-1 {
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .bold-text-doller {
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .sec-2-btn{
+                 font-size: 100%;
+            }
+        }
+         @media (min-width:481px) and (max-width:769px) {
+            .sec-2{
+                grid-template-columns: auto auto;
+            }
+         }
+         @media (max-width:481px) {
+            .sec-2{
+                grid-template-columns: auto;
+            }
+         }
+          /* section-8------------------------MD-------- */
+
+        @media (min-width:845px) and (max-width:954px) {
+            .sec-8 {
+                height: auto;
+            }
+
+            .img-sec-8 {
+                height: 48%;
+            }
+            .sec-8-boxes {
+                height: 50vh;
+            }
+            .sec-8-text {
+                font-size: 13px;
+                text-align: center;
+            }
+
+            .bold-text-1 {
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .bold-text-doller {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+
+        @media (min-width:769px) and (max-width:845px) {
+            .sec-8 {
+                height: auto;
+            }
+
+            .img-sec-8 {
+                height: 48%;
+            }
+            .sec-8-boxes {
+                height: 50vh;
+            }
+            .sec-8-text {
+                font-size: 12px;
+                text-align: center;
+            }
+
+            .bold-text-1 {
+                font-size: 15px;
+                font-weight: 400;
+            }
+
+            .bold-text-doller {
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .sec-8-btn{
+                 /* padding: 4px 58px; */
+                 font-size: 100%;
+            }
+        }
+         @media (min-width:481px) and (max-width:769px) {
+            .sec-8{
+                grid-template-columns: auto auto;
+            }
+         }
+         @media (max-width:481px) {
+            .sec-8{
+                grid-template-columns: auto;
+            }
+        }
+         /* footer---------------------------MD---------- */
+         @media (max-width:992px) {
+            .footer-boxes{
+                grid-template-columns: auto auto;
+                gap: 2em;
+                border: none;
+            }
+         }
+
+         /* section-9=======MD======== */
+
+           @media (max-width:878px) {
+            .section-9{
+                display: block;
+                height: auto;
+            }
+            .sec-9-inr{
+                width: 100%;
+            }
+            .img-sec-9-block{
+                display: block;
+            }
+           }
+
+           /* section-1----------MD-------- */
+
+           @media(max-width:891px){
+            .sec-1-video{
+                width: 100vw;
+            }
+           }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="outer">
+            <div class="menu-btn">☰ <span class="menu">Menu</span></div>
+            <div class="sidebar" id="sidebar">
+                <span><a href="#">Home</a></span>
+                <span><a href="#">Rings</a></span>
+                <span><a href="#">Necklaces</a></span>
+                <span><a href="#">Bracelets</a></span>
+                <span><a href="#">Watches</a></span>
+                <span><a href="#">New Arrivals</a></span>
+                <span><a href="#">Offers</a></span>
+                <span><a href="#">Contact</a></span>
+            </div>
+        </div>
+        <div class="logo">BVlGARI</div>
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart heart"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </header>
+
+    <!-- section-1-------------------------------------------- -->
+
+    <section class="sec-1">
+        <video class="sec-1-video" width="100%" height="100%" autoplay loop muted playsinline>
+            <source src="./video-1.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- section-2--------------------------------------------->
+    <div class="sec-2-main">
+        <h1 class="heading-2-sec">A HOLIDAY WISHLIST FOR HER</h1>
+        <P class="sec-main-pera">creations with a solar aura and the night-hearted spirit summer.</P>
+        <button class="btn-sec-2-main">
+            <div class="hover-underline">discover the selection</div>
+        </button>
+        <section class="sec-2">
+            <div class="sec-2-boxes">
+                <img class="img-sec-2"
+                    src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw5aba7e11/images/large/58582e826a855c90a0497bd5ffe62ba3.png?sw=350&sh=350&sm=fit&sfrm=png"
+                    alt="" height="100%" width="100%">
+                <div class="sec-2-text">
+                    <p class="bold-text-1">CLASH DE CARTIER</p>
+                    <p class="bold-text-1">BRASHLET, MEDIUM</p>
+                    <p class="bold-text-1">MODEL</p>
+                    <P><i>Yellow Gold</i></P>
+                    <p class="bold-text-doller">$12,889</p>
+                    <button class="sec-2-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="sec-2-boxes">
+                <img class="img-sec-2"
+                    src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwb75e5228/images/large/7bc8d2b27f915492ba2ef4fa86a3319e.png?sw=350&sh=350&sm=fit&sfrm=png"
+                    alt="" height="100%" width="100%">
+                <div class="sec-2-text">
+                    <p class="bold-text-1">CLASH DE CARTIER</p>
+                    <p class="bold-text-1">RING SMALL MODEL</p>
+                    <P><i>Yellow Gold</i></P>
+                    <p class="bold-text-doller">$12,889</p>
+                    <button class="sec-2-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="sec-2-boxes resonsive-1">
+                <img class="img-sec-2"
+                    src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwfe6f7003/images/large/f945e965f8dc527fa8e1e3a2d89bb963.png?sw=350&sh=350&sm=fit&sfrm=png"
+                    alt="" height="100%" width="100%">
+                <div class="sec-2-text">
+                    <p class="bold-text-1">PENTHER DE </p>
+                    <p class="bold-text-1">CARTIER RING, SEMI-</p>
+                    <p class="bold-text-1">PAVED</p>
+                    <P><i>Yellow Gold diamonds</i></P>
+                    <p class="bold-text-doller">$12,889</p>
+                    <button class="sec-2-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="sec-2-boxes resonsive-1">
+                <img class="img-sec-2"
+                    src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw348eda3f/images/large/1339ea5b49695546ab3e366f8f6ae0c5.png?sw=350&sh=350&sm=fit&sfrm=png"
+                    alt="" height="100%" width="100%">
+                <div class="sec-2-text">
+                    <p class="bold-text-1">SANTOSH DE</p>
+                    <p class="bold-text-1">CARTIER, WATCH</p>
+                    <P><i>Yellow Gold small model</i></P>
+                    <p class="bold-text-doller">$12,889</p>
+                    <button class="sec-2-btn">Buy Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- section-3--------------------------------------------->
+
+    <div class="main-3">
+        <div class="sec-3">
+            <img class="sec-3-img"
+                src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Library-Sites-CartierSharedLibraryAESA-BGTJ/default/dw94dacc0f/homepage/2025/8%20August/W1/IND/GRAIN_DE_CAFE_CLASH_BANNER_2560x996.jpg?sw=1024&sfrm=jpg"
+                alt="" height="100%" width="90%">
+        </div>
+        <div class="main-3-inr">
+            <h1 class="heading-2-sec">A HOLIDAY WISHLIST FOR HER</h1>
+            <P class="sec-main-pera">creations with a solar aura and the night-hearted spirit summer.</P>
+            <button class="btn-sec-2-main">
+                <div class="hover-underline">discover the selection</div>
+            </button>
+        </div>
+    </div>
+
+    <!-- section-4---------------------------------------------->
+
+    <section class="section-4">
+        <div class="sec-4-inr">
+            <div class="inr-4-boxes">
+                <div class="inr-sec-1-sale">
+                    <div class="img-sec-4-inr">
+                        <img src="https://media.bulgari.com/image/upload/c_fill,h_654,w_490/q_auto/f_auto/v1747063378/collection/magnificent-icons/bzero1/J-25_MI_BZero1_SL01_1080x1350_udzqbj.jpg"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-4-inr">
+                        <p>Bracelet tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+                <div class="inr-sec-1-sale">
+                    <div class="img-sec-4-inr">
+                        <img src="https://media.bulgari.com/image/upload/c_fill,h_654,w_490/q_auto/f_auto/v1747130010/collection/magnificent-icons/divas-dream/J-25_MI_Diva_SL01_1080x1350_gzjvn4.jpg"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-4-inr">
+                        <p>Necklace tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inr-4-boxes">
+                <div class="inr-sec-1-sale">
+                    <div class="img-sec-4-inr">
+                        <img src="https://media.bulgari.com/image/upload/c_fill,h_654,w_490/q_auto/f_auto/v1747130010/collection/magnificent-icons/divas-dream/J-25_MI_Diva_SL01_1080x1350_gzjvn4.jpg"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-4-inr">
+                        <p>Necklace tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+                <div class="inr-sec-1-sale">
+                    <div class="img-sec-4-inr">
+                        <img src="https://media.bulgari.com/image/upload/c_fill,h_654,w_490/q_auto/f_auto/v1747129141/collection/magnificent-icons/serpenti-jewellery/J-25_MI_Serpenti_SL01_1080x1350_p0ytyj.jpg"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-4-inr">
+                        <p>Necklace tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-4-inr">
+            <img src="https://media.bulgari.com/image/upload/c_fill,h_1090,w_818/q_auto/f_auto/v1747139396/plp/divas/J-25_MI_Serpenti_Diva_Tbg_Endorsed01_1080x1350_c1cu7n.jpg"
+                alt="" height="100%" width="100%">
+        </div>
+    </section>
+
+    <!-- section-5---------------------------------->
+    <div class="main-5">
+        <div class="main-5-top">
+            <h1>From Signature Technique to Icon</h1>
+            <p>
+                A luminous expression of innovation, dynamism, and gold mastery, Bvlgari Tubogas reimagines a
+                traditional
+                technique with contemporary ingenuity. Since the 1940s, its distinctive, solder-free coils have embodied
+                the
+                Maison’s avant-garde spirit, now reborn as an iconic jewellery collection.
+            </p>
+            <button class="btn-sec-2-main">
+                <div class="hover-underline">discover the selection</div>
+            </button>
+        </div>
+        <section class="sec-5">
+            <div class="sec-5-child sec-5-child-1">
+                <div class="sec-5-inr-boxes">
+                    <img src="https://media.bulgari.com/image/upload/c_fill,h_276,w_490/q_auto/f_auto/v1747065150/collection/magnificent-icons/bzero1/JW-25_MI_Octo_Serpenti_Tbg_Diva_BZero1_Endorsed01_1920x1080_vaylvj.jpg"
+                        alt="" height="100%" width="100%">
+                </div>
+                <div class="sec-5-inr-boxes box-2-sec-5">
+                    <img src="https://media.bulgari.com/image/upload/c_fill,h_654,w_490/q_auto/f_auto/v1747064276/collection/magnificent-icons/bzero1/J-25_MI_BZero1_Serpenti_Endorsed01_1080x1350_ofq5e4.jpg"
+                        alt="" height="100%" width="100%">
+                </div>
+                <div class="sec-5-inr-boxes">
+                    <img src="https://media.bulgari.com/image/upload/c_fill,h_411,w_730/q_auto/f_auto/v1747064415/collection/magnificent-icons/bzero1/J-25_MI_Serpenti_BZero1_Diva_Tbg_Endorsed01_1920x1080_xu3hdt.jpg"
+                        alt="" height="100%" width="100%">
+                </div>
+            </div>
+            <div class="sec-5-child">
+                <div class="sec-5-inr-boxes sec-5-inr-c-1">
+                    <img src="https://media.bulgari.com/image/upload/c_fill,h_872,w_490/q_auto/f_auto/v1747065030/collection/magnificent-icons/bzero1/J-25_MI_Serpenti_Diva_Tbg_Endorsed01_1080x1920_iphexv.jpg"
+                        alt="" height="100%" width="100%">
+
+                </div>
+                <div class="sec-5-inr-boxes sec-5-inr-c-1">
+                    <img src="https://media.bulgari.com/image/upload/c_fill,h_872,w_490/q_auto/f_auto/v1747064654/collection/magnificent-icons/bzero1/JW-25_MI_Serpenti_Tbg_Endorsed01_1080x1920_fuugkr.jpg"
+                        alt="" height="100%" width="100%">
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- section-6===================================== -->
+    <section class="sec-6">
+        <div class="sec-6-img">
+            <img src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Library-Sites-CartierSharedLibraryAESA-BGTJ/default/dw0880ec5a/homepage/2025/8%20August/W1/IND/WISHLIST_FOR_HIM_BANNER_2560x996.jpg?sw=1024&sfrm=jpg"
+                alt="" height="100%" width="100%">
+        </div>
+    </section>
+    <!-- section-7===================================== -->
+    <section class="sec-7">
+        <div class="main-7-inr">
+            <h1 class="heading-7-sec">A HOLIDAY WISHLIST FOR HIM</h1>
+            <P class="sec-main-pera">fore sunshine style, it's all in the details: elegent and iconic, between sky and
+                sea.</P>
+            <button class="btn-sec-7-main">
+                <div class="hover-underline">discover the selection</div>
+            </button>
+        </div>
+    </section>
+    <!-- section-8--------------------------------------------->
+    <section class="sec-8">
+        <div class="sec-8-boxes">
+            <img class="img-sec-8"
+                src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw550dabdc/images/large/715e42a9c1315b07b7e5ca605ff43e14.png?sw=350&sh=350&sm=fit&sfrm=png"
+                alt="" height="100%" width="100%">
+            <div class="sec-8-text">
+                <p class="bold-text-1">CLASH DE CARTIER</p>
+                <p class="bold-text-1">BRASHLET, MEDIUM</p>
+                <p class="bold-text-1">MODEL</p>
+                <P><i>Yellow Gold</i></P>
+                <p class="bold-text-doller">$9,998</p>
+                <button class="sec-8-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="sec-8-boxes">
+            <img class="img-sec-8" src="https://i.pinimg.com/originals/b7/f3/cc/b7f3ccc1fb4732a76299722f3bbd8ee7.jpg"
+                alt="" height="100%" width="100%">
+            <div class="sec-2-text">
+                <p class="bold-text-1">CLASH DE CARTIER</p>
+                <p class="bold-text-1">NECKLACE</p>
+                <P><i>Yellow Gold</i></P>
+                <p class="bold-text-doller">$19,888</p>
+                <button class="sec-8-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="sec-8-boxes">
+            <img class="img-sec-8"
+                src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw17dd13a7/images/large/4bbccaa610715f679c019e4d12484dce.png?sw=350&sh=350&sm=fit&sfrm=png"
+                alt="" height="100%" width="100%">
+            <div class="sec-8-text">
+                <p class="bold-text-1">PENTHER DE </p>
+                <p class="bold-text-1">CARTIER RING, SEMI-</p>
+                <p class="bold-text-1">PAVED</p>
+                <P><i>Yellow Gold diamonds</i></P>
+                <p class="bold-text-doller">$13,999</p>
+                <button class="sec-8-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="sec-8-boxes">
+            <img class="img-sec-8"
+                src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw41a58ce7/images/large/dee4cc50e1bf53e9b7384a9ff32ef37d.png?sw=350&sh=350&sm=fit&sfrm=png"
+                alt="" height="100%" width="100%">
+            <div class="sec-8-text">
+                <p class="bold-text-1">SANTOSH DE</p>
+                <p class="bold-text-1">CARTIER, RING</p>
+                <P><i>Yellow Gold small model</i></P>
+                <p class="bold-text-doller">$10,889</p>
+                <button class="sec-8-btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- section-9=========================== -->
+
+    <!-- section-4---------------------------------------------->
+
+    <section class="section-9">
+        <div class="sec-9-inr">
+            <div class="inr-9-boxes">
+                <div class="inr-sec-9-sale">
+                    <div class="img-sec-9-inr">
+                        <img src="https://media.bulgari.com/image/upload/c_pad,h_570,w_730/q_auto/f_auto/1606100.png"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-9-inr">
+                        <p>Bracelet tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+                <div class="inr-sec-9-sale">
+                    <div class="img-sec-9-inr">
+                        <img src="https://media.bulgari.com/image/upload/c_pad,h_570,w_730/q_auto/f_auto/1607392.png"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-9-inr">
+                        <p>Necklace tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inr-9-boxes">
+                <div class="inr-sec-9-sale">
+                    <div class="img-sec-9-inr">
+                        <img class="img-sec-9-block" src="https://media.bulgari.com/image/upload/c_pad,h_851,w_1090/q_auto/f_auto/1607758.png"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-9-inr">
+                        <p>Necklace tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+                <div class="inr-sec-9-sale">
+                    <div class="img-sec-9-inr">
+                        <img src="https://media.bulgari.com/image/upload/c_pad,h_570,w_730/q_auto/f_auto/1606111.png"
+                            alt="" height="100%" width="100%">
+                    </div>
+                    <div class="text-sec-9-inr">
+                        <p>Necklace tubogas</p>
+                        <p>$12,554</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-9-inr">
+            <img src="https://media.bulgari.com/image/upload/c_fill,h_1090,w_818/q_auto/f_auto/v1747139430/plp/tubogas/JW-25_MI_Octo_BZero1_Serpenti_Endorsed01_1080x1350_hqlrpd.jpg"
+                alt="" height="100%" width="100%">
+        </div>
+    </section>
+    <!-- footer------------------------------ -->
+
+    <footer class="footer">
+        <div class="footer-input">
+            <h1>Subscribe to our Newsletter</h1>
+            <div class="input-or-btn">
+                <input class="input-btn" type="email" placeholder="Email">
+                <button class="ftr-input-btn">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="footer-boxes">
+            <div class="footer-boxes-inr">
+                <h2>Customer Care</h2>
+                <a href="">Contact Us</a>
+                <a href="">Call Now: +91 11 4678 8888</a>
+                <a href="">FAQ</a>
+                <a href="">SiteMap</a>
+            </div>
+            <div class="footer-boxes-inr">
+                <h2>Our Company</h2>
+                <a href="">Find a Boutique</a>
+                <a href="">Careers</a>
+                <a href="">Cartier and Corporate</a>
+                <a href="">Social Responsibility</a>
+            </div>
+            <div class="footer-boxes-inr">
+                <h2>Legal Area</h2>
+                <a href="">Terms of Use</a>
+                <a href="">Terms of Use</a>
+                <a href="">Conditions of Sale</a>
+                <a href="">Credits</a>
+            </div>
+            <div class="footer-boxes-inr">
+                <h2>Follow Us</h2>
+                <p><i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </p>
+                <p><i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

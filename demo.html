@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Sidebar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .outer {
+            position: relative;
+            padding: 1rem;
+        }
+
+        .menu-btn {
+            font-size: 2rem;
+            cursor: pointer;
+            color: black;
+        }
+
+        .menu-btn:hover {
+            color: red;
+        }
+
+        .sidebar {
+            display: none;
+            background-color: white;
+            padding: 10px;
+            /* position: absolute; */
+            top: 40px;
+            left: 0;
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+
+        .sidebar a {
+            display: block;
+            font-size: 1.2rem;
+            padding: 8px 0;
+            text-decoration: none;
+            color: red;
+        }
+
+        /* Show sidebar on hover */
+        .outer:hover .sidebar {
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background: goldenrod;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="menu-btn">☰</div>
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Rings</a>
+            <a href="#">Necklaces</a>
+            <a href="#">Bracelets</a>
+            <a href="#">Watches</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Offers</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
